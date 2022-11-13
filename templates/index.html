@@ -1,9 +1,30 @@
 {% extends 'base.html' %}
 
 {% block head %}
-
+<title>Song Master</title>
 {% endblock %}
 
 {% block body %}
-<h1>Hello World 2</h1>
+<div>
+    <h1>All Songs</h1>
+    <table>
+        <tr>
+            <th>Song</th>
+            <th>Author</th>
+            <th>Group</th>
+        </tr>
+        <tr>
+            <td></td>
+            <td></td>
+            <td>
+                <a href="">Delete</a>
+                <a href="">Update</a>
+            </td>
+        </tr>
+    </table>
+    <form action="/" method="POST">
+        <input type="text" name="content" id="content">
+        <input type="submit" value="Add Song">
+    </form>
+</div>
 {% endblock %}
