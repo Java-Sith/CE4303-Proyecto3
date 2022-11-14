@@ -6,24 +6,30 @@
 
 {% block body %}
 <div>
-    <h1>All Songs</h1>
+    <h1 style="text-align: center;">All Songs</h1>
     <table>
         <tr>
             <th>Song</th>
             <th>Author</th>
             <th>Group</th>
         </tr>
-        <tr>
-            <td></td>
-            <td></td>
-            <td>
-                <a href="">Delete</a>
-                <a href="">Update</a>
-            </td>
-        </tr>
+        {% for song in songs %}
+            <tr>
+                <td>{{ song.song }}</td>
+                <td>{{ song.author }}</td>
+                <td>{{ song.group }}</td>
+                <td>
+                    <a href="/delete/{{song['Song']}}">Delete</a>
+                    <br>
+                    <a href="/update/{{song['Song']}}">Update</a>
+                </td>
+            </tr>
+        {% endfor %}
     </table>
     <form action="/" method="POST">
-        <input type="text" name="content" id="content">
+        <input type="text" name="song" id="song">
+        <input type="text" name="author" id="author">
+        <input type="text" name="group" id="group">
         <input type="submit" value="Add Song">
     </form>
 </div>
