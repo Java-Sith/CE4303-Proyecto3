@@ -1,20 +1,30 @@
-from flask import Flask, render_template, url_for, request, redirect
+from flask import Flask, render_template, request, redirect
+import xml.etree.ElementTree as ET
+
 
 app = Flask(__name__)
 
 songs = { }
 
-song = {'Song': 'Somebody To Love', 'Author': 'Freddie Mercury', 'Group': 'Queen'}
+i = 0
 
-songs[0] = song
+# song = {'Song': 'Somebody To Love', 'Author': 'Freddie Mercury', 'Group': 'Queen'}
 
-print(songs)
+# songs[0] = song
 
-#songs = []
+# print(songs)
+
+def xml_injection(id, count):
+    if id == 1:
+        return render_template('index.html', songs = songs)
+    else:
+        while count < 10000:
+            songs[count] = {'Song': 'Somebody To Love', 'Author': 'Freddie Mercury', 'Group': 'Queen'}
+        return render_template('index.html', songs = songs)
 
 @app.route('/', methods=['POST', 'GET'])
 def index():
-    i = 0
+    global i
     if request.method == 'POST':
         song_name = request.form['song']
         song_author = request.form['author']
@@ -23,18 +33,19 @@ def index():
             songs[i] = {'Song': str(song_name), 'Author': str(song_author), 'Group': str(song_group)}
             i += 1
             print(songs)
-            return redirect('/')
+            print(i)
+            return redirect(('/'))
         except:
             return "There was an issue posting!"
     else:
-        return render_template('index.html', songs = songs)
+        return xml_injection(1, 0)
 
 @app.route('/delete/<int:id>')
 def delete(id):
     try:
         songs[id] = { }
         print(songs)
-        return redirect('/')
+        return redirect(('/'))
     except:
         return "There was an issue deleting!"
 
@@ -46,7 +57,7 @@ def update(id):
         song_group = request.form['group']
         try:
             songs[id] = {'Song': str(song_name), 'Author': str(song_author), 'Group': str(song_group)}
-            return redirect('/')
+            return redirect(('/'))
         except:
             return "There was an issue posting!"
     else:

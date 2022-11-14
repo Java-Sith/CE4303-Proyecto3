@@ -13,15 +13,15 @@
             <th>Author</th>
             <th>Group</th>
         </tr>
-        {% for song in songs %}
+        {% for key, value in songs.items() %}
             <tr>
-                <td>{{ song.song }}</td>
-                <td>{{ song.author }}</td>
-                <td>{{ song.group }}</td>
+                <td>{{ value['Song'] }}</td>
+                <td>{{ value['Author'] }}</td>
+                <td>{{ value['Group'] }}</td>
                 <td>
-                    <a href="/delete/{{song['Song']}}">Delete</a>
+                    <a href="">Delete</a>
                     <br>
-                    <a href="/update/{{song['Song']}}">Update</a>
+                    <a href="">Update</a>
                 </td>
             </tr>
         {% endfor %}

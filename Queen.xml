@@ -2,16 +2,14 @@
 <Musica>
     <CancionFavorita>
         <Titulo>Don't Stop Me Now</Titulo>
-        <Autor>Queen</Autor>
+        <Autor>Freddie Mercury</Autor>
     </CancionFavorita>
-
     <CancionFavorita>
         <Titulo>Killer Queen</Titulo>
-        <Autor>Queen</Autor>
+        <Autor>Freddy Mercury</Autor>
     </CancionFavorita>
-
     <CancionFavorita>
         <Titulo>Somebody To Love</Titulo>
-        <Autor>Queen</Autor>
+        <Autor>Freddy Mercury</Autor>
     </CancionFavorita>
 </Musica>
