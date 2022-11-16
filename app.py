@@ -7,7 +7,7 @@ app = Flask(__name__)
 tree = ET.parse('Queen.xml')
 root = tree.getroot()
 
-def xml_injection(id, count):
+def xml_injection(id, count, time):
     start = T.time()
     cancionFavorita = ET.Element('CancionFavorita')
     titulo = ET.Element('Titulo') 
@@ -26,17 +26,19 @@ def xml_injection(id, count):
             cancionFavorita.append(grupo)
             cancionFavorita.tail = "\n    "
             root.append(cancionFavorita)
-            root.set('id', 1)
+            root.set('id', id)
             count += 1
             tree.write('Queen.xml')
         end = T.time()
-        print(end - start)
-        return render_template('index.html', root = root)
+        time = end - start
+        return render_template('index.html', root = root, time = time)
     else:
-        return render_template('index.html', root = root)
+        return render_template('index.html', root = root, time = time)
 
 @app.route('/', methods=['POST', 'GET'])
 def index():
+    id = 0
+    time = 0
     #POST
     if request.method == 'POST':
         start = T.time()
@@ -58,19 +60,22 @@ def index():
             root.append(cancionFavorita)
             root.set('id', request.form['id'])
             tree.write('Queen.xml')
+            id = request.form['id']
             end = T.time()
-            print(end - start)
+            time = end - start
             return redirect(('/'))
         except:
             end = T.time()
-            print(end - start)
+            time = end - start
+            print(time)
             return "There was an issue posting!"
     #GET
     else:
-        return xml_injection(request.form['id'], 0)
+        return xml_injection(id, 0, time)
 
 @app.route('/update/<int:id>', methods=['POST', 'GET'])
 def update(id):
+    time = 0
     if request.method == 'POST':
         start = T.time()
         cancionFavorita = ET.Element('CancionFavorita')
@@ -94,14 +99,14 @@ def update(id):
             cancionFavorita.tail = "\n    "
             root.insert(id, cancionFavorita)
             end = T.time()
-            print(end - start)
+            time = end - start
             return redirect(('/'))
         except:
             end = T.time()
-            print(end - start)
+            time = end - start
             return "There was an issue posting!"
     else:
-        return xml_injection(0, 0)
+        return xml_injection(id, 0, time)
 
 if __name__ == "__main__":
     app.run(debug=True)

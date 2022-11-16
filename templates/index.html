@@ -9,14 +9,14 @@
     <h1 style="text-align: center;">All Songs</h1>
     <table>
         <tr>
-            <th>ID</th>
+            <th>Time</th>
             <th>Song</th>
             <th>Author</th>
             <th>Group</th>
         </tr>
         {% for cancion in root.findall('CancionFavorita') %}
             <tr>
-                <td>{{ root.get('id') }}</td>
+                <td>{{ time }}</td>
                 <td>{{ cancion.find('Titulo').text }}</td>
                 <td>{{ cancion.find('Autor').text }}</td>
                 <td>{{ cancion.find('Group').text }}</td>
