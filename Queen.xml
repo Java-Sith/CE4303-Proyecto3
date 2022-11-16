@@ -1,15 +1,17 @@
-<?xml version="1.0" encoding="UTF-8"?>
 <Musica>
     <CancionFavorita>
         <Titulo>Don't Stop Me Now</Titulo>
         <Autor>Freddie Mercury</Autor>
+        <Group>Queen</Group>
     </CancionFavorita>
     <CancionFavorita>
         <Titulo>Killer Queen</Titulo>
         <Autor>Freddy Mercury</Autor>
+        <Group>Queen</Group>
     </CancionFavorita>
     <CancionFavorita>
         <Titulo>Somebody To Love</Titulo>
         <Autor>Freddy Mercury</Autor>
+        <Group>Queen</Group>
     </CancionFavorita>
 </Musica>
