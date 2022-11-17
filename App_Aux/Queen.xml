@@ -4,4 +4,14 @@
 		<Autor>Freddie Mercury</Autor>
 		<Grupo>Queen</Grupo>
     </CancionFavorita>
+    <CancionFavorita>
+        <Titulo>Somebody To Love</Titulo>
+		<Autor>Freddie Mercury</Autor>
+		<Grupo>Queen</Grupo>
+    </CancionFavorita>
+    <CancionFavorita>
+        <Titulo>Killer Queen</Titulo>
+		<Autor>Freddie Mercury</Autor>
+		<Grupo>Queen</Grupo>
+    </CancionFavorita>
 </Musica>
