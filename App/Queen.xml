@@ -14,4 +14,14 @@
 		<Autor>Freddie Mercury</Autor>
 		<Grupo>Queen</Grupo>
     </CancionFavorita>
+    <CancionFavorita>
+        <Titulo>Killer Queen</Titulo>
+		<Autor>Freddie Mercury</Autor>
+		<Grupo>Queen</Grupo>
+    </CancionFavorita>
+    <CancionFavorita>
+        <Titulo>Killer Queen</Titulo>
+		<Autor>Freddie Mercury</Autor>
+		<Grupo>Queen</Grupo>
+    </CancionFavorita>
 </Musica>
