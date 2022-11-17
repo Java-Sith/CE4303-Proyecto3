@@ -7,6 +7,7 @@
   <!ENTITY song4 "&song3;&song3;&song3;&song3;&song3;&song3;&song3;&song3;&song3;">
   <!ENTITY song5 "&song4;&song4;&song4;&song4;&song4;&song4;&song4;&song4;&song4;">
   <!ENTITY song6 "&song5;&song5;&song5;&song5;&song5;&song5;&song5;&song5;&song5;">
+  <!ENTITY song7 "&song6;&song6;">
   <!ENTITY autor "Freddie Mercury">
   <!ENTITY autor1 "&autor;&autor;&autor;&autor;&autor;&autor;">
   <!ENTITY autor2 "&autor1;&autor1;&autor1;&autor1;&autor1;&autor1;&autor1;&autor1;&autor1;">
@@ -14,6 +15,7 @@
   <!ENTITY autor4 "&autor3;&autor3;&autor3;&autor3;&autor3;&autor3;&autor3;&autor3;&autor3;">
   <!ENTITY autor5 "&autor4;&autor4;&autor4;&autor4;&autor4;&autor4;&autor4;&autor4;&autor4;">
   <!ENTITY autor6 "&autor5;&autor5;&autor5;&autor5;&autor5;&autor5;&autor5;&autor5;&autor5;">
+  <!ENTITY autor7 "&autor6;&autor6;">
   <!ENTITY group "Queen">
   <!ENTITY group1 "&group;&group;&group;&group;&group;&group;">
   <!ENTITY group2 "&group1;&group1;&group1;&group1;&group1;&group1;&group1;&group1;&group1;">
@@ -21,11 +23,12 @@
   <!ENTITY group4 "&group3;&group3;&group3;&group3;&group3;&group3;&group3;&group3;&group3;">
   <!ENTITY group5 "&group4;&group4;&group4;&group4;&group4;&group4;&group4;&group4;&group4;">
   <!ENTITY group6 "&group5;&group5;&group5;&group5;&group5;&group5;&group5;&group5;&group5;">
+  <!ENTITY group7 "&group6;&group6;">
 ]>
 <Musica>
   <CancionFavorita>
-    <Titulo>&song6;</Titulo>
-    <Autor>&autor6;</Autor>
-    <Grupo>&group6;</Grupo>
+    <Titulo>&song7;</Titulo>
+    <Autor>&autor7;</Autor>
+    <Grupo>&group7;</Grupo>
   </CancionFavorita>
 </Musica>
